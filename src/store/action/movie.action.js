@@ -3,7 +3,7 @@ import {
   GET_LIST_MOVIE,
   GET_MOVIE,
   GET_MOVIE_LIST_PAGINATION,
-  SET_MOVIE_DETAIL
+  SET_MOVIE_DETAIL,
 } from "../constant/movie.constant";
 import { api } from "../../core/service/api.service";
 import { movieService } from "../../core/service/movie.service";
@@ -16,7 +16,7 @@ export const getListMovie = () => {
       const res = await api.get(url, method);
       dispatch({
         type: GET_LIST_MOVIE,
-        payload: res.data
+        payload: res.data,
       });
     } catch (err) {
       console.log(err.status);
@@ -27,7 +27,7 @@ export const getListMovie = () => {
 export const getMovie = (maCumRap) => {
   return {
     type: GET_MOVIE,
-    payload: maCumRap
+    payload: maCumRap,
   };
 };
 
@@ -39,7 +39,7 @@ export const getDetailMovie = (maPhim) => {
       const res = await api.get(url, method);
       dispatch({
         type: GET_DETAIL_MOVIE,
-        payload: res.data
+        payload: res.data,
       });
     } catch (err) {
       console.log(err);
@@ -53,21 +53,13 @@ export const getDetailMovie = (maPhim) => {
  * Name: getMovieListPaginationAction
  */
 
-export const getMovieListPaginationAction = (
-  groupID,
-  pageNumber,
-  itemPerPageNumber
-) => {
+export const getMovieListPaginationAction = () => {
   return async (dispatch) => {
     try {
-      const response = await movieService.getMovieListPagination(
-        groupID,
-        pageNumber,
-        itemPerPageNumber
-      );
+      const response = await movieService.getTransaction;
       dispatch({
         type: GET_MOVIE_LIST_PAGINATION,
-        payload: response.data
+        payload: response.data,
       });
     } catch (error) {
       console.log(error);

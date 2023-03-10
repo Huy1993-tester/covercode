@@ -62,7 +62,7 @@ const Content = (props) => {
                     </Route>
                   );
                 })}
-                <Route path={`${path}/:maPhim`} component={Showtime} />
+                {/* <Route path={`${path}/:maPhim`} component={Showtime} /> */}
                 <Route exact path="/admin">
                   Dashboard
                 </Route>

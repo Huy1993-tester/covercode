@@ -1,12 +1,12 @@
 export const movieFieldList = [
   {
     key: "maPhim",
-    name_VN: "Mã Phim",
+    name_VN: "propertyCode",
     width: "10%"
   },
   {
     key: "tenPhim",
-    name_VN: "Tên Phim",
+    name_VN: "propertyName",
     width: "10%"
   },
   // {
@@ -16,27 +16,42 @@ export const movieFieldList = [
   // },
   {
     key: "trailer",
-    name_VN: "Trailer",
+    name_VN: "projectCode",
     width: "10%"
   },
   {
     key: "hinhAnh",
-    name_VN: "Hình Ảnh",
+    name_VN: "projectName",
     width: "10%"
   },
   {
     key: "moTa",
-    name_VN: "Mô Tả",
+    name_VN: "propertyPrice",
     width: "10%"
   },
   {
     key: "ngayKhoiChieu",
-    name_VN: "Ngày Khởi Chiếu",
+    name_VN: "staffCode",
     width: "15%"
-  }
+  },
   // {
   //   key: "danhGia",
-  //   name_VN: "Đánh Giá",
+  //   name_VN: "staffName",
+  //   width: "5%"
+  // },
+  // {
+  //   key: "danhGia",
+  //   name_VN: "amountPaid",
+  //   width: "10%"
+  // },
+  // {
+  //   key: "danhGia",
+  //   name_VN: "phaseName",
+  //   width: "10%"
+  // },
+  // {
+  //   key: "danhGia",
+  //   name_VN: "paidDate",
   //   width: "10%"
   // }
 ];

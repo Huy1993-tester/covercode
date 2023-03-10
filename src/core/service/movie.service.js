@@ -1,19 +1,19 @@
 import axios from "axios";
 import { DOMAIN } from "../global/constant";
-import { TOKEN } from "./user.service";
+// import { TOKEN } from "./user.service";
 
 class MovieService {
   getMovieListPagination = (groupID, pageNumber, itemPerPageNumber) => {
     return axios({
       url: `${DOMAIN}/api/QuanLyPhim/LayDanhSachPhimPhanTrang?maNhom=${groupID}&soTrang=${pageNumber}&soPhanTuTrenTrang=${itemPerPageNumber}`,
-      method: "GET"
+      method: "GET",
     });
   };
 
   deleteMovie = (data) => {
     return axios({
       url: `${DOMAIN}/api/QuanLyPhim/XoaPhim?MaPhim=${data}`,
-      method: "DELETE"
+      method: "DELETE",
     });
   };
 
@@ -21,7 +21,7 @@ class MovieService {
     return axios({
       url: `${DOMAIN}/api/QuanLyPhim/ThemPhimUploadHinh`,
       method: "POST",
-      data
+      data,
     });
   };
 
@@ -29,7 +29,13 @@ class MovieService {
     return axios({
       url: `${DOMAIN}/api/QuanLyPhim/CapNhatPhimUpload`,
       method: "POST",
-      data
+      data,
+    });
+  };
+  getTransaction = () => {
+    return axios({
+      url: "https://34.125.211.126:3000/api/transaction/find-all?limit=10&page=1",
+      method: "GET",
     });
   };
 }

@@ -52,7 +52,7 @@ const DataTable = ({
                   }}
                   style={{ width: "60px" }}
                 >
-                  STT
+                  id
                 </TableCell>
                 {dataFieldList.map((dataField, i) => {
                   return (
@@ -73,6 +73,7 @@ const DataTable = ({
               </TableRow>
             </TableHead>
             <TableBody>
+              
               {dataListPagination.map((data, index) => {
                 return (
                   <TableRow key={index}>

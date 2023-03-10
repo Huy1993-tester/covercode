@@ -38,7 +38,7 @@ const Movie = () => {
 
   const hanldeChangePage = (event, value) => {
     setCurrentPage(value);
-    dispatch(getMovieListPaginationAction("GP01", value, itemPerPageNumber));
+    dispatch(getMovieListPaginationAction);
   };
 
   const handleOpenModal = () => {
@@ -63,7 +63,7 @@ const Movie = () => {
         });
         setOpenModal(false);
         setCurrentPage(1);
-        dispatch(getMovieListPaginationAction("GP01", 1, itemPerPageNumber));
+        dispatch(getMovieListPaginationAction);
         return true;
       } else {
         swal({
@@ -97,11 +97,7 @@ const Movie = () => {
               timer: 2000
             });
             dispatch(
-              getMovieListPaginationAction(
-                "GP01",
-                currentPage,
-                itemPerPageNumber
-              )
+              getMovieListPaginationAction
             );
           } else {
             swal({
@@ -137,7 +133,7 @@ const Movie = () => {
         setIsUpdating(false);
         dispatch(setMovieDetailAction({}));
         dispatch(
-          getMovieListPaginationAction("GP01", currentPage, itemPerPageNumber)
+          getMovieListPaginationAction
         );
       } else {
         swal({
@@ -153,8 +149,8 @@ const Movie = () => {
 
   useEffect(() => {
     setCurrentPage(1);
-    dispatch(getMovieListPaginationAction("GP01", 1, itemPerPageNumber));
-  }, [itemPerPageNumber]);
+    dispatch(getMovieListPaginationAction());
+  }, []);
 
   return (
     <div>
