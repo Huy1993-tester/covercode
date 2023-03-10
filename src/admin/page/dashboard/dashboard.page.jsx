@@ -23,6 +23,7 @@ function Dashboard(props) {
     setOpen(false);
   };
   const handleTitle = (title) => {
+    console.log(title);
     setTitle(title);
   };
 

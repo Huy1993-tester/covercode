@@ -56,7 +56,8 @@ export const getDetailMovie = (maPhim) => {
 export const getMovieListPaginationAction = () => {
   return async (dispatch) => {
     try {
-      const response = await movieService.getTransaction;
+      const response = await movieService.getTransaction();
+      console.log(response);
       dispatch({
         type: GET_MOVIE_LIST_PAGINATION,
         payload: response.data,

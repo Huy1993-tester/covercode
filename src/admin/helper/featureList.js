@@ -16,9 +16,9 @@ export const featureList = [
   },
   {
     id: "movie",
-    title: "Movie management",
-    title_VN: "Quản lý Phim",
-    url: "/admin/movie",
+    title: "Project management",
+    title_VN: "Quản lý Dự Án",
+    url: "/admin/Project",
     component: <Movie />,
     icon: <MovieIcon />
   }

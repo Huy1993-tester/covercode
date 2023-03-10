@@ -42,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
 
 const Header = (props) => {
   const classes = useStyles();
-
+  console.log(props,'ada');
   return (
     <AppBar
       position="absolute"

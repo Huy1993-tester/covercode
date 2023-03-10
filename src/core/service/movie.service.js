@@ -34,8 +34,13 @@ class MovieService {
   };
   getTransaction = () => {
     return axios({
-      url: "https://34.125.211.126:3000/api/transaction/find-all?limit=10&page=1",
+      url: "http://34.125.211.126:3000/api/transaction/find-all?limit=10&page=1",
       method: "GET",
+      // headers: {
+      //   "Content-Type": "application/json",
+      //   Authorization:
+      //     "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImI4ZWRiNDgzLTYwMWUtNDNhYi05MjhmLTAxMTBhYzkxZjgyNiIsImlhdCI6MTY3ODQ2MTcwNywiZXhwIjoxNjc4NDY1MzA3fQ.op0o1XWeVyUtpWop6T1YCWiWftxwM3L8apZ2v0UOXhw",
+      // },
     });
   };
 }

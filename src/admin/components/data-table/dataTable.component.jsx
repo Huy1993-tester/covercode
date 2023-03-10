@@ -8,7 +8,7 @@ import {
   TableRow,
   TableCell,
   IconButton,
-  Table
+  Table,
 } from "@material-ui/core";
 import DeleteIcon from "@material-ui/icons/Delete";
 import EditIcon from "@material-ui/icons/Edit";
@@ -18,15 +18,15 @@ import { NavLink } from "react-router-dom";
 const useStyles = makeStyles((theme) => ({
   buttonOutlineNone: {
     "&:focus": {
-      outline: "none"
-    }
+      outline: "none",
+    },
   },
   tableCellHead: {
-    fontWeight: "600"
+    fontWeight: "600",
   },
   tableCellBody: {
-    padding: `0 ${theme.spacing(2)}px`
-  }
+    padding: `0 ${theme.spacing(2)}px`,
+  },
 }));
 
 const DataTable = ({
@@ -35,10 +35,11 @@ const DataTable = ({
   handleDelete,
   handleEdit,
   deleteObjectKey,
-  isMovie
+  isMovie,
 }) => {
   const classes = useStyles();
 
+  console.log(dataListPagination, "'dssdsd");
   return (
     <>
       <Grid>
@@ -48,7 +49,7 @@ const DataTable = ({
               <TableRow>
                 <TableCell
                   classes={{
-                    head: classes.tableCellHead
+                    head: classes.tableCellHead,
                   }}
                   style={{ width: "60px" }}
                 >
@@ -67,13 +68,12 @@ const DataTable = ({
                 })}
                 <TableCell
                   classes={{
-                    head: classes.tableCellHead
+                    head: classes.tableCellHead,
                   }}
                 ></TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
-              
               {dataListPagination.map((data, index) => {
                 return (
                   <TableRow key={index}>
@@ -88,7 +88,7 @@ const DataTable = ({
                             textOverflow: "ellipsis",
                             overflow: "hidden",
                             whiteSpace: "nowrap",
-                            maxWidth: dataField.width
+                            maxWidth: dataField.width,
                           }}
                           className={classes.tableCellBody}
                         >
@@ -107,7 +107,7 @@ const DataTable = ({
                             variant="outlined"
                             color="primary"
                           >
-                            Lịch chiếu
+                            Detail Dự Án
                           </Button>
                         </NavLink>
                       </TableCell>

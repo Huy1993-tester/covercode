@@ -1,11 +1,11 @@
 export const movieFieldList = [
   {
-    key: "maPhim",
+    key: "propertyCode",
     name_VN: "propertyCode",
     width: "10%"
   },
   {
-    key: "tenPhim",
+    key: "propertyName",
     name_VN: "propertyName",
     width: "10%"
   },
@@ -15,22 +15,22 @@ export const movieFieldList = [
   //   width: "10%"
   // },
   {
-    key: "trailer",
+    key: "projectCode",
     name_VN: "projectCode",
     width: "10%"
   },
   {
-    key: "hinhAnh",
+    key: "projectName",
     name_VN: "projectName",
     width: "10%"
   },
   {
-    key: "moTa",
+    key: "propertyPrice",
     name_VN: "propertyPrice",
     width: "10%"
   },
   {
-    key: "ngayKhoiChieu",
+    key: "staffCode",
     name_VN: "staffCode",
     width: "15%"
   },

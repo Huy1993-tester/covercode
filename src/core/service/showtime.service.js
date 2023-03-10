@@ -1,6 +1,6 @@
 import axios from "axios";
 import { DOMAIN } from "../global/constant";
-import { TOKEN } from "./user.service";
+// import { TOKEN } from "./user.service";
 
 class ShowtimeService {
   createShowtime = (data) => {

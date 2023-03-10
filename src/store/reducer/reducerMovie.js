@@ -44,7 +44,8 @@ export const ReducerMovie = (state = initailState, action) => {
       return { ...state };
     }
     case GET_MOVIE_LIST_PAGINATION: {
-      state.movieListPagination = [...payload.items];
+      console.log(payload,"'dsdsdsds");
+      state.movieListPagination = [...payload.data];
       state.totalPages = payload.totalPages;
       return { ...state };
     }

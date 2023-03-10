@@ -38,6 +38,7 @@ const useStyles = makeStyles((theme) => ({
 const Content = (props) => {
   const { path } = useRouteMatch();
   const { feature } = useParams();
+  console.log(feature,"'dsdsds");
   const classes = useStyles();
   useEffect(() => {
     props.handleTitle(

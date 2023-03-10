@@ -21,6 +21,7 @@ const Movie = () => {
   const movieListPagination = useSelector(
     (state) => state.movie.movieListPagination
   );
+  console.log(movieListPagination,'adasdad');
 
   const totalPages = useSelector((state) => state.movie.totalPages);
 
@@ -38,7 +39,7 @@ const Movie = () => {
 
   const hanldeChangePage = (event, value) => {
     setCurrentPage(value);
-    dispatch(getMovieListPaginationAction);
+    dispatch(getMovieListPaginationAction());
   };
 
   const handleOpenModal = () => {
@@ -63,7 +64,7 @@ const Movie = () => {
         });
         setOpenModal(false);
         setCurrentPage(1);
-        dispatch(getMovieListPaginationAction);
+        dispatch(getMovieListPaginationAction());
         return true;
       } else {
         swal({
@@ -97,7 +98,7 @@ const Movie = () => {
               timer: 2000
             });
             dispatch(
-              getMovieListPaginationAction
+              getMovieListPaginationAction()
             );
           } else {
             swal({
@@ -133,7 +134,7 @@ const Movie = () => {
         setIsUpdating(false);
         dispatch(setMovieDetailAction({}));
         dispatch(
-          getMovieListPaginationAction
+          getMovieListPaginationAction()
         );
       } else {
         swal({
