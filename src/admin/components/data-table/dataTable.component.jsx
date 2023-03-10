@@ -99,7 +99,7 @@ const DataTable = ({
                     {isMovie ? (
                       <TableCell className={classes.tableCellBody}>
                         <NavLink
-                          to={`/admin/showtime/${data[`${deleteObjectKey}`]}`}
+                          to={`/admin/detail/${data[`${deleteObjectKey}`]}`}
                         >
                           <Button
                             className={classes.buttonOutlineNone}
